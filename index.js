@@ -19,7 +19,7 @@ const homeFile = fs.readFileSync("home.html","utf-8");
 
 const server = http.createServer((req,res)=>{
     if(req.url == "/"){
-        requests('https://api.openweathermap.org/data/2.5/weather?q=Vadodara&appid=00c1e092a112a4aa1151a32c475fcc44')
+        requests('https://api.openweathermap.org/data/2.5/weather?q=Vadodara&appid=[ YOUR API KEY]')
         .on('data',(chunk)=> {
             const obj_data = JSON.parse(chunk);
             //const tem = document.getElementsByClassName("temp");
